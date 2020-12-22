@@ -1,0 +1,18 @@
+List of properties
+CID
+Name
+Weight 
+Hydrogen bond donor count
+Hydrogen bond acceptor count 
+Topological Polar surface area
+Heavy atom count
+Formal charge
+Complexity 
+Melting point 
+Boiling point
+Solubility 
+Density 
+pH
+pKa
+Dissociation constant 
+Collision cross section 
