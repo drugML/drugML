@@ -1,0 +1,81 @@
+name,cid,weight,hydro_bond_donor_count,hydro_bond_acceptor_count,topo_polar_surface_area,heavy_atom_count,formal_charge,complexity,melting_pt,boiling_pt,solubility,density,pH,pKa,dissociation_const,collision_cross_sec,work
+acebutolol,1978,336.4,3,5,87.7,24,0,401,136-138,,259,,,,,"190.2 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+amiloride,16231,229.63,4,5,159,15,0,279,240.5-241.5,,,,,,,,True
+amlodipine,2162,408.9,2,7,99.9,28,0,647,199-201,,,,,,,,True
+atenolol,2249,266.34,3,4,84.6,19,0,263,158-160,,13300,,,,,"159.5 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+azilsartan,135415867,456.4,2,7,115,34,0,783,212-214 °C,,,,,,,,True
+benazepril,5362124,424.5,2,6,95.9,31,0,619,,,,,,,,,True
+bendroflumethiazide,2315,421.4,3,10,135,27,0,740,222-223 °C,,108,,,,,"188.6 Å² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",True
+betaxolol,2369,307.4,2,4,50.7,22,0,286,70-72 °C,,451,,,,,,True
+bisoprolol,2405,325.4,2,5,60,23,0,278,100-103,,,,,,,,True
+bucindolol,51045,363.5,3,4,81.1,27,0,515,,,,,,,,,True
+bumetanide,2471,364.4,3,7,127,25,0,528,230-231,,,,,,,,True
+candesartan,2541,440.5,2,7,119,33,0,660,183-185 °C,,,,,,,,True
+captopril,44093,217.29,2,4,58.6,14,0,244,103-104,,,,,,,,True
+carteolol,2583,292.37,3,4,70.6,21,0,354,,,,,,,,,True
+carvedilol,2585,406.5,3,5,75.7,30,0,508,,,,,,,,,True
+chlorothiazide,2720,295.7,2,6,135,17,0,532,"648 to 649 °F (Decomposes) (NTP, 1992)",,,,,,,,True
+chlorthalidone,2732,338.8,3,5,118,22,0,564,,,,,,,,,True
+cilnidipine,5282138,492.5,1,8,120,36,0,896,110ºC,,,,,,,,True
+clevidipine,153994,456.3,1,7,90.9,30,0,748,,,,,,,,,True
+clonidine,2803,230.09,2,1,36.4,14,0,222,,,,,,,,,True
+clopamide,12492,345.8,2,5,101,22,0,498,,,,,,,,,True
+diltiazem,39186,414.5,0,6,84.4,29,0,565,187-188,,465,,,,,"197.8 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+doxazosin,3157,451.5,1,9,112,33,0,678,275-277,,,,,,,,True
+enalapril,5388962,376.4,2,6,95.9,27,0,519,143-144.5,,16400,,,,,"187.2 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+epitizide,15671,425.9,3,11,160,24,0,662,,,,,,,,,True
+eplerenone,443872,414.5,0,6,82.2,30,0,907,,,,,,,,,True
+eprosartan,5281037,424.5,2,6,121,30,0,618,248-250 °C (mesylate form),,,,,,,,True
+ethacrynic acid,3278,303.13,1,4,63.6,19,0,370,"252 °F (NTP, 1992)",,,,,,,,True
+felodipine,3333,384.2,1,5,64.6,25,0,614,,,,,,,,,True
+fimasartan,9870652,501.6,1,6,123,36,0,849,,,,,,,,,True
+fosinopril,55891,563.7,1,7,110,39,0,850,149-153°C,,,,,,,,True
+furosemide,3440,330.74,3,7,131,21,0,481,"403 °F (decomposes) (NTP, 1992)",,,,,,,,True
+guanabenz,5702063,231.08,2,2,76.8,14,0,228,,,,,,,,,True
+guanfacine,3519,246.09,2,1,81.5,15,0,256,213-216,,,,,,,,True
+hydrochlorothiazide,3639,297.7,3,7,135,17,0,494,"523 to 527 °F (NTP, 1992)",,,,,,,,True
+indapamide,3702,365.8,2,5,101,24,0,580,160-162,,,,,,,,True
+indoramin,33625,347.5,2,2,48.1,26,0,454,208-210,,,,,,,,True
+irbesartan,3749,428.5,1,5,87.1,32,0,682,180-181 °C,,,,,,,,True
+isradipine,3784,371.4,1,8,104,27,0,685,168-170 °C,,,,,,,,True
+labetalol,3869,328.4,4,4,95.6,24,0,385,,,,,,,,,True
+lercanidipine,65866,611.7,1,8,114,45,0,1090,,,,,,,,,True
+levamlodipine,9822750,408.9,2,7,99.9,28,0,647,,,,,,,,,True
+lisinopril,5362119,405.5,4,7,133,29,0,550,,,,,,,,,True
+losartan,3961,422.9,2,5,92.5,30,0,520,178-184,,,,,,,,True
+metalozone,4170,365.8,2,5,101,24,0,594,,,,,,,,,True
+methyclothiazide,4121,360.2,2,7,126,20,0,571,,,,,,,,,True
+methyldopa,38853,211.21,4,5,104,15,0,246,"572 °F approximately (decomposes) (NTP, 1992)",,,,,,,,True
+metoprolol,4171,267.36,2,4,50.7,19,0,215,,,,,,,,,True
+moexipril,91270,498.6,2,8,114,36,0,742,,,,,,,,,True
+moxonidine,4810,241.68,2,4,71.4,16,0,275,,,,,,,,,True
+nadolol,39147,309.4,4,5,82,22,0,344,124-130,,8330,,,,,"172 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+nebivolol,71301,405.4,3,7,71,29,0,483,223.0-228.0,,,,,,,,True
+nicardipine,4474,479.5,1,8,114,35,0,856,136-138 °C,,2.2,,,,,"212.1 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+nifedipine,4485,346.3,1,7,110,25,0,608,"342 to 345 °F (NTP, 1992)",,,,,,,,True
+nimodipine,4497,418.4,1,8,120,30,0,736,,,,,,,,,True
+nisoldipine,4499,388.4,1,7,110,28,0,704,,,,,,,,,True
+nitrendipine,4507,360.4,1,7,110,26,0,661,156-160 °C,,,,,,,,True
+olmesartan,158781,446.5,3,7,130,33,0,656,,,,,,,,,True
+oxprenolol,4631,265.35,2,4,50.7,19,0,246,,,,,,,,,True
+penbutolol,37464,291.4,2,3,41.5,21,0,294,70.0 °C,,,,,,,,True
+perindopril,107807,368.5,2,6,95.9,26,0,524,,,,,,,,,True
+phenoxybenzamine,4768,303.8,0,2,12.5,21,0,262,,,,,,,,,True
+phentolamine,5775,281.35,2,3,47.9,21,0,363,,,,,,,,,True
+pindolol,4828,248.32,3,3,57.3,18,0,248,,,,,,,,,True
+polythiazide,4870,439.9,2,11,152,25,0,692,"396.5 °F (NTP, 1992)",,,,,,,,True
+prazosin,4893,383.4,1,8,107,28,0,544,277-280,,1.4,,,,,"192.7 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",True
+propranolol,4946,259.34,2,3,41.5,19,0,257,,,,,,,,,True
+quinapril,54892,438.5,2,6,95.9,32,0,648,120-130 °C,,,,,,,,True
+ramipril,5362129,416.5,2,6,95.9,30,0,619,,,,,,,,,True
+spironolactone,5833,416.6,0,5,85.7,29,0,818,,,,,,,,,True
+telmisartan,65999,514.6,1,4,72.9,39,0,831,261-263 °C,,,,,,,,True
+terazosin,5401,387.4,1,8,103,28,0,544,271-274,,,,,,,,True
+timolol,33624,316.42,2,8,108,21,0,310,202-203,,,,,,,,True
+tolazoline,5504,160.22,1,1,24.4,12,0,169,,,,,,,,,True
+torsemide,41781,348.4,3,5,109,24,0,518,163-164 °C,,,,,,,,True
+trandolapril,5484727,430.5,2,6,95.9,31,0,634,119-123 °C,,,,,,,,True
+triamterene,5546,253.26,3,7,130,19,0,307,"601 °F (NTP, 1992)",,,,,,,,True
+valsartan,60846,435.5,2,6,112,32,0,608,116-117 °C,,,,,,,,True
+verapamil,2520,454.6,0,6,64,33,0,606,<25°C,,,,,,,,True
+xipamide,26618,354.8,3,5,118,23,0,526,,,,,,,,,True
