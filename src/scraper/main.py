@@ -12,16 +12,9 @@ def read_file(file_path, names_list):
         print(Exception)
 
 
-def get_drug_names_from_file(drugs_work, drugs_dont_work):
-    """Function to append names of drug to a list
-
-    Args:
-        drugs_work (list): list of drugs that work
-        drugs_dont_work (list): list of drugs that don't work
-    """
-
-    read_file("./files/drugs_that_work.txt", drugs_work)
-    # read_file("./files/drugs_that_dont_work.txt", drugs_dont_work)
+def get_drug_names_from_file(drugs_dont_work):
+    read_file("files/drugs_that_dont_work.txt", drugs_dont_work)
+    print(drugs_dont_work)
 
 
 def scrape_drugs_work_property(drugs_work):
@@ -70,11 +63,11 @@ def main():
     drugs_work = []
     drugs_dont_work = []
     # get all names from file to list
-    get_drug_names_from_file(drugs_work, drugs_dont_work)
+    get_drug_names_from_file(drugs_dont_work)
     # for all names, scrape its properties
-    scrape_drugs_work_property(drugs_work)
+    scrape_drugs_work_property(drugs_dont_work)
     # write all scraped data to csv
-    write_to_csv('./files/sample_data.csv', drugs_work)
+    write_to_csv(r'.\files\sample_data.csv', drugs_dont_work)
 
 
 if __name__ == "__main__":
