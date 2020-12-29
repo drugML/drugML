@@ -3,8 +3,8 @@ from sklearn.model_selection import train_test_split
 
 # split data into x and y for shuffling
 def split_data(training_set):
-    temp = np.hsplit(training_set, [5,5])
-    x_temp = np.hsplit(temp[0],[2,2])
+    temp = np.hsplit(training_set, [11,11])
+    x_temp = np.hsplit(temp[0],[1,1])
     x = x_temp[2]
     y = temp[2]
     return x, y
@@ -35,7 +35,7 @@ def closest_average(test, average_hypertension, average_non_hypertension):
     else:
         return 0
     
-training_set = np.loadtxt(open(r"..\..\..\dataset\sample\training.csv", "rb"), delimiter=",", skiprows=1)
+training_set = np.loadtxt(open(r"..\..\..\dataset\hypertension\training_0.0.1.csv", "rb"), delimiter=",", skiprows=1)
 
 x, y = split_data(training_set)
 
