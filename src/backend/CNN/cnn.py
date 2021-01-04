@@ -11,7 +11,9 @@ def split_data(dataset):
 
 def model_setup():
     model = Sequential()
-    model.add(Dense(64, input_dim=10, activation='relu'))
+    model.add(Dense(128, input_dim=10, activation='relu'))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dropout(0.2))
     model.add(Dense(32, activation='relu'))
     model.add(Dropout(0.2))
     model.add(Dense(16, activation='relu'))
@@ -31,7 +33,7 @@ model = model_setup()
 
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-model.fit(x_train, y_train, epochs=8, batch_size=20, verbose=1)
+model.fit(x_train, y_train, epochs=16, batch_size=10, verbose=1)
 
 loss, accuracy = model.evaluate(x_test, y_test, verbose=1)
 print('Model Loss: %.2f, Accuracy: %.2f' % ((loss*100),(accuracy*100)))
@@ -41,7 +43,7 @@ m = 0
 n = 0
 for i in range(len(x_test)):
     n = n+1
-    if predictions[i]==1:
+    if predictions[i]==y_test[i]:
         m = m+1
     print('Predicted %d---> Expected %d' % (predictions[i], y_test[i]))
 print(m)
