@@ -34,6 +34,7 @@ guanabenz	5702063
 guanfacine	3519
 hydralazine	3637
 hydrochlorothiazide	3639
+hydroflumethiazide	3647
 indapamide	3702
 indoramin	33625
 irbesartan	3749

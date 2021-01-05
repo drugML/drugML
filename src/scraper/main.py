@@ -13,7 +13,7 @@ def read_file(file_path, names_list):
 
 
 def get_drug_names_from_file(drugs_dont_work):
-    read_file("files/drugs_that_dont_work.txt", drugs_dont_work)
+    read_file("files/test.txt", drugs_dont_work)
     print(drugs_dont_work)
 
 
