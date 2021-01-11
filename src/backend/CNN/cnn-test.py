@@ -6,24 +6,25 @@ from tensorflow.keras.models import load_model
 from numpy import loadtxt
 
 def split_data(dataset):
-    x = dataset[:,1:11]
-    y = dataset[:,11]
+    rowLength = len(dataset[0]) - 1
+    x = dataset[:, 1:rowLength]
+    y = dataset[:, rowLength]
     return x, y
 
-dataset = loadtxt(open(r"..\..\..\dataset\hypertension\training_0.0.1.csv", "rb"), delimiter=",", skiprows=1)
+dataset = loadtxt(open(r"..\..\..\dataset\hypertension\validation_0.0.1.csv", "rb"), delimiter=",", skiprows=1)
 
 x, y = split_data(dataset)
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.9, random_state=10)
+#x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.9, random_state=10)
 
-model = load_model("default\\best.model")
+model = load_model(r"logs\models\use.model")
 
 prediction = model.predict(x)
 
 for i in range(len(prediction)):
-    if prediction[i] < 0.5:
+    if prediction[i] <= 0.5:
         prediction[i] = 0
-    elif prediction[i] >= 0.5:
+    elif prediction[i] > 0.5:
         prediction[i] = 1
 
 print(prediction)
@@ -31,9 +32,9 @@ print(prediction)
 correct = 0
 testLength = len(x)
 for i in range(testLength):
-    if prediction[i]==y[i]:
+    if prediction[i] == y[i]:
         correct = correct + 1
-    print('Predicted %d---> Expected %d' % (prediction[i], y[i]))
+    print('Predicted %d ---> Expected %d' % (prediction[i], y[i]))
 
 accuracy = (correct/testLength) * 100
 
