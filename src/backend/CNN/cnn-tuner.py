@@ -11,19 +11,21 @@ TIME = f"{int(time.time())}"
 LOG_DIR = f"logs\\ktuner-runs\\{TIME}"
 
 # hyperparameters settings
-STEP = 64
+STEP = 32
 MIN_VALUE = 32
 MAX_VALUE = 512
 
 # tuner settings
 MAX_TRIALS = 100
 EXEC_PER_TRIALS = 5
+EPOCHS = 8
+
 
 def split_data(dataset):
-    rowLength = len(dataset[0]) - 1
-    x = dataset[:,1:rowLength]
+    row_length = len(dataset[0]) - 1
+    x = dataset[:, 1:row_length]
     x = x / x.max(axis=0)
-    y = dataset[:,rowLength]
+    y = dataset[:, row_length]
     return x, y
 
 # load training dataset from directory
@@ -31,10 +33,10 @@ dataset = loadtxt(open(r"..\..\..\dataset\hypertension\training_0.0.1.csv", "rb"
 
 x, y = split_data(dataset)
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, shuffle=True)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, shuffle=True)
+
 
 def build_model(hp):
-# TODO add params for layer size
     model = Sequential()
     model.add(Dense(hp.Int("input_units", min_value=MIN_VALUE, max_value=MAX_VALUE, step=STEP), input_dim=len(dataset[0]) - 2, activation='relu'))
 
@@ -49,14 +51,14 @@ def build_model(hp):
 
 tuner = RandomSearch(build_model, objective="val_accuracy", max_trials=MAX_TRIALS, executions_per_trial=EXEC_PER_TRIALS, directory=LOG_DIR)
 
-tuner.search(x=x_train, y=y_train, epochs=5, validation_data=(x_test,y_test))
+tuner.search(x=x_train, y=y_train, epochs=EPOCHS, validation_data=(x_test, y_test))
 
 best_models = tuner.get_best_models()
 print(best_models[0].summary())
 best_model = best_models[0]
 
 loss, accuracy = best_model.evaluate(x_test, y_test, verbose=1)
-print('Model Loss: %.2f, Accuracy: %.2f' % ((loss*100),(accuracy*100)))
+print('Model Loss: %.2f, Accuracy: %.2f' % ((loss*100), (accuracy*100)))
 
 # uncomment the following to show validation outputs
 '''
