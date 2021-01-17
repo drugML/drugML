@@ -12,19 +12,19 @@ def read_file(file_path, names_list):
         print(Exception)
 
 
-def get_drug_names_from_file(drugs_dont_work):
-    read_file("files/test.txt", drugs_dont_work)
-    print(drugs_dont_work)
+def get_drug_names_from_file(drugs_list):
+    read_file("files/scrape.txt", drugs_list)
+    print(drugs_list)
 
 
-def scrape_drugs_work_property(drugs_work):
+def scrape_drugs_list_property(drugs_list):
     # for each drug, instantiate a scraper instance
-    for index, (drug_name, CID) in enumerate(drugs_work):
+    for index, (drug_name, CID) in enumerate(drugs_list):
         drug = Scraper(drug_name, CID, True)
         raw_properties = drug.get_properties()
         drug.format_properties(raw_properties)
         # replace name with scraper instance
-        drugs_work[index] = drug
+        drugs_list[index] = drug
 
 
 def write_to_csv(file_path, drugs):
@@ -41,6 +41,7 @@ def write_to_csv(file_path, drugs):
         'melting_pt',
         'boiling_pt',
         'solubility',
+        'logP',
         'density',
         'pH',
         'pKa',
@@ -60,14 +61,13 @@ def write_to_csv(file_path, drugs):
 
 
 def main():
-    drugs_work = []
-    drugs_dont_work = []
+    drugs_list = []
     # get all names from file to list
-    get_drug_names_from_file(drugs_dont_work)
+    get_drug_names_from_file(drugs_list)
     # for all names, scrape its properties
-    scrape_drugs_work_property(drugs_dont_work)
+    scrape_drugs_list_property(drugs_list)
     # write all scraped data to csv
-    write_to_csv(r'.\files\sample_data.csv', drugs_dont_work)
+    write_to_csv(r'.\files\scraped_data.csv', drugs_list)
 
 
 if __name__ == "__main__":
