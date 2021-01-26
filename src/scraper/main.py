@@ -1,6 +1,8 @@
 from scraper import Scraper
+from pathlib import Path
 import csv
 
+scraper_dir = Path("files/")
 
 def read_file(file_path, names_list):
     f = open(file_path, mode='r', encoding='utf-8')
@@ -13,7 +15,8 @@ def read_file(file_path, names_list):
 
 
 def get_drug_names_from_file(drugs_list):
-    read_file("files/scrape.txt", drugs_list)
+    file = scraper_dir / "scrape_targets.txt";
+    read_file(file, drugs_list)
     print(drugs_list)
 
 
@@ -61,13 +64,15 @@ def write_to_csv(file_path, drugs):
 
 
 def main():
+    
     drugs_list = []
     # get all names from file to list
     get_drug_names_from_file(drugs_list)
     # for all names, scrape its properties
     scrape_drugs_list_property(drugs_list)
     # write all scraped data to csv
-    write_to_csv(r'.\files\scraped_data.csv', drugs_list)
+    out_file = scraper_dir / "scraped_data.csv"
+    write_to_csv(out_file, drugs_list)
 
 
 if __name__ == "__main__":
