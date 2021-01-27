@@ -28,8 +28,11 @@ def split_data(dataset):
     y = dataset[:, row_length]
     return x, y
 
+
 # load training dataset from directory
-dataset = loadtxt(open(r"..\..\..\dataset\hypertension\training_0.0.1.csv", "rb"), delimiter=",", skiprows=1)
+dataset_folder = Path("../../../drug_set/")
+dataset_file = dataset_folder / "training_0.0.1.csv"
+dataset = loadtxt(open(dataset_file, "rb"), delimiter=",", skiprows=1)
 
 x, y = split_data(dataset)
 

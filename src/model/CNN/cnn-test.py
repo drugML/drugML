@@ -11,13 +11,17 @@ def split_data(dataset):
     y = dataset[:, rowLength]
     return x, y
 
-dataset = loadtxt(open(r"..\..\..\dataset\hypertension\validation_0.0.1.csv", "rb"), delimiter=",", skiprows=1)
+dataset_folder = Path("../../../drug_set/")
+dataset_file = dataset_folder / "training_0.0.1.csv"
+dataset = loadtxt(open(dataset_file, "rb"), delimiter=",", skiprows=1)
 
 x, y = split_data(dataset)
 
 #x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.9, random_state=10)
 
-model = load_model(r"logs\models\use.model")
+models_folder = Path("logs/models/")
+model_file = models_folder / "use.model"
+model = load_model(model_file)
 
 prediction = model.predict(x)
 

@@ -2,6 +2,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense,Dropout
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.utils import plot_model
+from pathlib import Path
 from numpy import loadtxt
 
 def split_data(dataset):
@@ -26,7 +27,9 @@ LAYERS = [512, 256, 128, 64]
 EPOCHS = 20
 BATCH_SIZE = 8
 
-dataset = loadtxt(open(r"..\..\..\dataset\hypertension\training_0.0.1.csv", "rb"), delimiter=",", skiprows=1)
+dataset_folder = Path("../../../drug_set/")
+dataset_file = dataset_folder / "training_0.0.1.csv"
+dataset = loadtxt(open(dataset_file, "rb"), delimiter=",", skiprows=1)
 
 x, y = split_data(dataset)
 
