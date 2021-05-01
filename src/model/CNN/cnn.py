@@ -1,7 +1,7 @@
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from sklearn.model_selection import train_test_split
-from keras.utils import np_utils
+# from keras.utils import np_utils
 from tensorflow.keras.utils import plot_model
 from pathlib import Path
 from numpy import loadtxt
@@ -54,12 +54,13 @@ if __name__ == '__main__':
     print('Model Loss: %.2f, Accuracy: %.2f' % ((loss * 100), (accuracy * 100)))
 
     # uncomment the following to show validation outputs
-    # correct = 0
-    # predictions = model.predict(x_test)
-    # for i in range(len(x_test)):
-    #     if predictions[i].argmax(axis=0) == y_test[i]:
-    #         correct = correct + 1
-    #     print('Predicted %d ---> Expected %d' % (predictions[i].argmax(axis=0), y_test[i]))
-    # print('Correct: %d' % correct)
-    # print('Total: %d' % len(x_test))
-    # print('Accuracy: ' + str(correct/len(x_test)))
+    correct = 0
+    predictions = model.predict(x_test)
+    for i in range(len(x_test)):
+        # print(predictions[i])
+        if predictions[i].argmax(axis=0) == y_test[i]:
+            correct = correct + 1
+        print('Predicted %d ---> Expected %d' % (predictions[i].argmax(axis=0), y_test[i]))
+    print('Correct: %d' % correct)
+    print('Total: %d' % len(x_test))
+    print('Accuracy: ' + str(correct/len(x_test)))

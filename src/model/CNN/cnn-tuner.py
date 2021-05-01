@@ -77,4 +77,4 @@ if __name__ == '__main__':
     # print('Accuracy: ' + str(correct / len(x_test)))
 
     # Uncomment to save
-    best_model.save(f'logs\\models\\best-{TIME}-acc-{(accuracy * 100):.2f}.model')
+    # best_model.save(f'logs\\models\\best-{TIME}-acc-{(accuracy * 100):.2f}.model')

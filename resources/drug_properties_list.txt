@@ -1,4 +1,4 @@
-List of properties
+List of Properties for Drug Dataset
 CID
 Name
 Weight 
@@ -15,4 +15,15 @@ Density
 pH
 pKa
 Dissociation constant 
-Collision cross section 
+Collision cross section
+
+List of Properties Currently Used in Model
+Weight
+Hydrogen bond donor count
+Hydrogen bond acceptor count
+Topological Polar surface area
+Heavy atom count
+Complexity
+Melting point
+Solubility
+pKa
