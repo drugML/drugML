@@ -5,20 +5,8 @@ from sklearn.model_selection import train_test_split
 from kerastuner.tuners import RandomSearch
 from kerastuner.engine.hyperparameters import HyperParameters
 from numpy import loadtxt
+from pathlib import Path
 import time
-
-TIME = f"{int(time.time())}"
-LOG_DIR = f"logs\\ktuner-runs\\{TIME}"
-
-# hyperparameters settings
-STEP = 32
-MIN_VALUE = 32
-MAX_VALUE = 512
-
-# tuner settings
-MAX_TRIALS = 100
-EXEC_PER_TRIALS = 5
-EPOCHS = 8
 
 
 def split_data(dataset):
@@ -30,13 +18,13 @@ def split_data(dataset):
 
 
 # load training dataset from directory
-dataset_folder = Path("../../../drug_set/")
-dataset_file = dataset_folder / "training_0.0.1.csv"
+dataset_folder = Path("../../../dataset/drug_set/")
+dataset_file = dataset_folder / "training_0.0.2.csv"
 dataset = loadtxt(open(dataset_file, "rb"), delimiter=",", skiprows=1)
 
 x, y = split_data(dataset)
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, shuffle=True)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, shuffle=True)
 
 
 def build_model(hp):
@@ -46,34 +34,47 @@ def build_model(hp):
     for i in range(hp.Int("n_layers", 1, 4)):
         model.add(Dense(hp.Int(f"conv_{i}_units", min_value=MIN_VALUE, max_value=MAX_VALUE, step=STEP), activation='relu'))
         
-    model.add(Dense(1, activation='sigmoid'))
+    model.add(Dense(3, activation='sigmoid'))
 
-    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
 
-tuner = RandomSearch(build_model, objective="val_accuracy", max_trials=MAX_TRIALS, executions_per_trial=EXEC_PER_TRIALS, directory=LOG_DIR)
+if __name__ == '__main__':
+    TIME = f"{int(time.time())}"
+    LOG_DIR = f"logs\\ktuner-runs\\{TIME}"
 
-tuner.search(x=x_train, y=y_train, epochs=EPOCHS, validation_data=(x_test, y_test))
+    # hyperparameters settings
+    STEP = 32
+    MIN_VALUE = 32
+    MAX_VALUE = 512
 
-best_models = tuner.get_best_models()
-print(best_models[0].summary())
-best_model = best_models[0]
+    # tuner settings
+    MAX_TRIALS = 100
+    EXEC_PER_TRIALS = 5
+    EPOCHS = 8
 
-loss, accuracy = best_model.evaluate(x_test, y_test, verbose=1)
-print('Model Loss: %.2f, Accuracy: %.2f' % ((loss*100), (accuracy*100)))
+    tuner = RandomSearch(build_model, objective="val_accuracy", max_trials=MAX_TRIALS, executions_per_trial=EXEC_PER_TRIALS, directory=LOG_DIR)
 
-# uncomment the following to show validation outputs
-'''
-correct = 0
-predictions = (best_model.predict(x_test) > 0.5).astype("int32")
-for i in range(len(x_test)):
-    if predictions[i]==y_test[i]:
-        correct = correct + 1
-    print('Predicted %d ---> Expected %d' % (predictions[i], y_test[i]))
-print('Correct %d' % correct)
-print('Total %d' % len(x_test))
-'''
+    tuner.search(x=x_train, y=y_train, epochs=EPOCHS, validation_data=(x_test, y_test))
 
-# Uncomment to save
-best_model.save(f'logs\\models\\best-{TIME}-acc-{(accuracy*100):.2f}.model')
+    best_models = tuner.get_best_models()
+    print(best_models[0].summary())
+    best_model = best_models[0]
+
+    loss, accuracy = best_model.evaluate(x_test, y_test, verbose=1)
+    print('Model Loss: %.2f, Accuracy: %.2f' % ((loss * 100), (accuracy * 100)))
+
+    # uncomment the following to show validation outputs
+    # correct = 0
+    # predictions = best_model.predict(x_test)
+    # for i in range(len(x_test)):
+    #     if predictions[i].argmax(axis=0) == y_test[i]:
+    #         correct = correct + 1
+    #     print('Predicted %d ---> Expected %d' % (predictions[i].argmax(axis=0), y_test[i]))
+    # print('Correct %d' % correct)
+    # print('Total %d' % len(x_test))
+    # print('Accuracy: ' + str(correct / len(x_test)))
+
+    # Uncomment to save
+    best_model.save(f'logs\\models\\best-{TIME}-acc-{(accuracy * 100):.2f}.model')
