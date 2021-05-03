@@ -4,6 +4,7 @@ import csv
 
 scraper_dir = Path("files/")
 
+
 def read_file(file_path, names_list):
     f = open(file_path, mode='r', encoding='utf-8')
     try:
@@ -15,7 +16,7 @@ def read_file(file_path, names_list):
 
 
 def get_drug_names_from_file(drugs_list):
-    file = scraper_dir / "scrape_targets.txt";
+    file = scraper_dir / "scrape_targets.txt"
     read_file(file, drugs_list)
     print(drugs_list)
 
@@ -57,8 +58,8 @@ def write_to_csv(file_path, drugs):
     for drug in drugs:
         result_data.append(drug.properties)
 
-    with open(file_path, 'w', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=field_names)
+    with open(file_path, 'w', encoding='utf-8', newline="") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(result_data)
 

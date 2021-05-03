@@ -1,1 +1,39 @@
-name,cid,weight,hydro_bond_donor_count,hydro_bond_acceptor_count,topo_polar_surface_area,heavy_atom_count,formal_charge,complexity,melting_pt,boiling_pt,solubility,logP,density,pH,pKa,dissociation_const,collision_cross_sec,work
+name,cid,weight,hydro_bond_donor_count,hydro_bond_acceptor_count,topo_polar_surface_area,heavy_atom_count,formal_charge,complexity,melting_pt,boiling_pt,solubility,logP,density,pH,pKa,dissociation_const,collision_cross_sec,work
+diclofenac,3033,296.1,2,3,49.3,19,0,304,283-285 °C,,2.37,4.51,,,4.15,,"157.7 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+etodolac,3308,287.35,2,3,62.3,21,0,400,146.5,,16,2.5,,,4.65,,"164.4 Å² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+fenoprofen,3342,242.27,1,3,46.5,18,0,271,168-171,,Slight (calcium salt),3.1,,,4.5,,,2
+flurbiprofen,3394,244.26,1,3,37.3,18,0,286,110-111 °C,,8,4.16,,,,,,2
+indomethacin,3715,357.8,1,4,68.5,25,0,506,"311 or 323.6° F (NTP, 1992)",,0.937,4.27,,,4.5,,"183.55 Å² [M+H]+ [CCS Type: DT, Method: stepped-field]",2
+ketorolac,3826,255.27,1,3,59.3,19,0,376,162-165 °C (tromethamine salt),,200,2.1,,,,,,2
+mefenamic acid,4044,241.28,2,3,49.3,18,0,292,230-231 °C,,20,5.12,,,4.2,,"153.3 Å² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+meloxicam,54677470,351.4,2,7,136,23,0,628,256,,22,0.1,,,4.08,,"173.9 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+nabumetone,4409,228.29,0,2,26.3,17,0,262,78-82,,Practically insoluble,2400,,,,,"148 Å² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+oxaprozin,4614,293.3,1,4,63.3,22,0,361,158-159 °C,,Insoluble,4.19,,,4.3,,"169.7 Å² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+piroxicam,54676228,331.3,2,6,108,23,0,611,198-200 °C,,23,3.06,,,6.3,,"170.9 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+sulindac,1548887,356.4,1,5,73.6,25,0,616,183,,3000,3.42,,,4.7,,"192.6 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+tolmetin,5509,257.28,1,3,59.3,19,0,347,156,,222,2.79,,,3.5,,156.7 Å² [M+H]+ [CCS Type: TW],2
+celecoxib,2662,381.4,1,7,86.4,26,0,577,157-159,,Poorly soluble,3.53,,,11.1,,"186.4 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+buprenorphine,644073,467.6,2,5,62.2,34,0,869,,,1.68e-02 g/L,4.98,,,8.31,,"209.7 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+hydrocodone,5284569,299.4,0,4,38.8,22,0,509,198,,"Soluble in acetone, ethyl acetate, chloroform",,,,,,"167.4 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+hydromorphone,5284570,285.34,1,4,49.8,21,0,494,Decomposes at 305ÂºC,,Highly soluble,1.06,,,8.2,,"163.9 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+meperidine,4058,247.33,0,3,29.5,18,0,276,270,,3220,2.72,,,8.59,,"158.5 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+methadone,4095,309.4,0,2,20.3,23,0,346,235,,"In water, 48.48 mg/L at 25 Â°C (est)",3.93,,,9.2,,"177.7 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+oxymorphone,5284604,301.34,2,5,70,22,0,539,248-249 Â°C,,24000,0.83,,,8.17,,"164.6 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+pentazocine,441278,285.4,1,2,23.5,21,0,414,146.3,,"1 G IN GREATER THAN 1000 ML WATER, 11 ML ALCOHOL, 2 ML CHLOROFORM, 42 ML ETHER",4.64,,,8.88,,,2
+tapentadol,9838022,221.34,1,2,23.5,16,0,193,,,"In water, 1161 mg/L at 25 Â°C (est)",2.87,,,9.34,,"152.1 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+tramadol,33741,263.37,1,3,32.7,19,0,282,178-181 Â°C,,Soluble,1.34,,,9.41,,"161.4 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+butorphanol,5361092,327.5,2,3,43.7,24,0,492,216.0 Â°C,,,,,,,,,2
+nalbuphine,5311304,357.4,3,5,73.2,26,0,597,230,,35.5,1.4,,,8.71,,,2
+amitriptyline,2160,277.4,0,1,3.2,21,0,331,196-197,,freely soluble in water,4.92,,,9.4,,"167.2 â„«Â² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+imipramine,3696,280.4,0,2,6.5,21,0,291,174-175,,18.2,4.8,,,9.4,,"166.5 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+venlafaxine,5656,277.4,1,3,32.7,20,0,279,215-217 °C (Hydrochloride salt),,572,,,,,,"171.6 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+carbamazepine,2554,236.27,1,1,46.3,18,0,326,189-192,,4.74e-04 M,2.77,,,,,"150.3 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+gabapentin,3446,171.24,2,3,63.3,12,0,162,162-166 °C; also reported as 165-167 °C,,>100mg/mL,1.25,,,3.7,,"138.6 Å² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+pregabalin,5486971,159.23,2,3,63.3,11,0,123,176,,Freely soluble,,,,,,,2
+topiramate,5284627,339.36,1,9,124,22,0,556,123-125 ºC,,9.8,0.13,,,8.7,,"170.1 Å² [M+Na]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+milnacipran,65833,246.35,1,2,46.3,18,0,295,,,1.23e+00 g/L,,,,,,,2
+methocarbamol,4107,241.24,2,5,91,17,0,236,92,,2.5g/100mL,0.61,,,,,,2
+carisoprodol,2576,260.33,2,4,90.6,18,0,281,"198 to 199 Â°F (NTP, 1992)",,"less than 1 mg/mL at 67.1Â° F (NTP, 1992)",2.1,,,15.06,,"149.1 â„«Â² [M+H]+ [CCS Type: TW, Method: calibrated with polyalanine and drug standards]",2
+chlorzoxazone,2733,169.56,1,2,38.3,11,0,185,191-191.5,,1000,1.6,,,,,,2
+cyclobenzaprine,2895,275.4,0,1,3.2,21,0,365,217,,Freely Soluble,5.2,,,8.47,,"164.7 Å² [M+H]+ [CCS Type: TW, Method: Major Mix IMS/Tof Calibration Kit (Waters)]",2
+metaxalone,15459,221.25,1,3,47.6,16,0,247,122,,Freely soluble in chloroform; soluble in methanol and 95% ethanol; practically insoluble in ether,2.3,,,,,,2
